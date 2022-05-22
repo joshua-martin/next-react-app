@@ -18,7 +18,7 @@ export const getBlogItems = gql`
     }
 `;
 
-const BlogItems: FC = () => {
+export const BlogItems: FC = () => {
 
     const { data, loading, error } = useQuery(getBlogItems);
 
@@ -40,5 +40,3 @@ const BlogItems: FC = () => {
         </>
     )
 };
-
-export default BlogItems;

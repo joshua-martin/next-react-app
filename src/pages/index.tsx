@@ -1,4 +1,4 @@
-import BlogItems from "../components/BlogItems/BlogItems";
+import { BlogItems } from "../components/BlogItems/BlogItems";
 import Head from 'next/head'
 
 export default function BlogListingPage() {
