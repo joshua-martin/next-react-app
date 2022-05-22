@@ -29,7 +29,7 @@ export const CardWrapper = styled.div`
     }
 `
 
-export const Card = styled.a`
+export const Card = styled.a<{ largeItem: boolean }>`
     border-radius: 4px;
     background-color: white;
     padding: 22px;
@@ -64,13 +64,13 @@ export const Card = styled.a`
     }
 `
 
-export const CardTitle = styled.h2`
+export const CardTitle = styled.h2<{ largeItem: boolean }>`
     font-size: ${props => props.largeItem ? props.theme.typography.headline : props.theme.typography.headlineSmall};
     color: ${props => props.theme.color.blue};
     margin: 0 0 8px;
 `
 
-export const CardContent = styled.p`
+export const CardContent = styled.p<{ largeItem: boolean }>`
     font-size: ${props => props.largeItem ? props.theme.typography.body : props.theme.typography.bodySmall};
     line-height: ${props => props.largeItem ? '24px' : '20px'};
     margin-bottom: 16px;

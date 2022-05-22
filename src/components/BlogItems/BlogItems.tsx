@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { gql, useQuery } from '@apollo/client';
 
-import BlogItem from './BlogItem';
+import { BlogItem } from './BlogItem';
 import * as S from './styles';
 
 export const getBlogItems = gql`
@@ -21,7 +21,7 @@ export const getBlogItems = gql`
 export const BlogItems: FC = () => {
 
     const { data, loading, error } = useQuery(getBlogItems);
-
+    
     if (loading) return <p>Loading</p>;
     if (error) return <p>Error</p>;
     if (!data) return <p>No blog items found</p>;
